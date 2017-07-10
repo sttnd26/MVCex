@@ -6,9 +6,13 @@
                            http://www.springframework.org/schema/mvc
                             http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>
+    <!--<bean class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping"/>-->
 
-    <bean name="/index.html" class="com.spring.controller.StudentController"/>
+    <!--<bean name="/index.html" class="com.spring.controller.StudentController"/>-->
+    <bean class="org.springframework.web.servlet.mvc.support.ControllerClassNameHandlerMapping"/>
+
+    <bean id="/*.html" class="com.spring.controller.MultipleController"/>
+
 
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.InternalResourceViewResolver">
