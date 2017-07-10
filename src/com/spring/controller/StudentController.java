@@ -10,10 +10,16 @@ public class StudentController {
 
     @RequestMapping(value = "/submitForm.html", method = RequestMethod.POST)
     @ResponseBody
-    String formData(@RequestParam("firstname") String fname,
-                    @RequestParam("lastname") String lname) {
-        return "First name: " + fname + "       Last name: " + lname;
+    String submitForm(StudentCO stud) {
+        return "First name: " + stud.getFirstname() + "     Last name: " + stud.getLastname();
     }
+
+//    @RequestMapping(value = "/submitForm.html", method = RequestMethod.POST)
+//    @ResponseBody
+//    String formData(@RequestParam("firstname") String fname,
+//                    @RequestParam("lastname") String lname) {
+//        return "First name: " + fname + "       Last name: " + lname;
+//    }
 
 //    @RequestMapping("/hello.html/{fname}/{lname}")
 //    @ResponseBody
