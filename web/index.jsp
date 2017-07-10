@@ -7,10 +7,16 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-  <head>
-    <title>$Title$</title>
-  </head>
-  <body>
-  <p>Default pg</p>
-  </body>
+<head>
+  <title></title>
+</head>
+<body>
+<form method="post" action="/submitForm.html">
+  <label>First name</label>
+  <input name="firstname" type="text">
+  <label>Last name</label>
+  <input name="lastname" type="text">
+  <input type="submit">
+</form>
+</body>
 </html>

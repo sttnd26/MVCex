@@ -1,19 +1,25 @@
 package com.spring.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
+
 import java.util.Map;
 
 @Controller
 public class StudentController {
 
-    @RequestMapping("/hello.html/{fname}/{lname}")
+    @RequestMapping(value = "/submitForm.html", method = RequestMethod.POST)
     @ResponseBody
-    String returnNameMap(@PathVariable Map<String, String> requestMap) {
-        return requestMap.get("fname") + " " + requestMap.get("lname");
+    String formData(@RequestParam("firstname") String fname,
+                    @RequestParam("lastname") String lname) {
+        return "First name: " + fname + "       Last name: " + lname;
     }
+
+//    @RequestMapping("/hello.html/{fname}/{lname}")
+//    @ResponseBody
+//    String returnNameMap(@PathVariable Map<String, String> requestMap) {
+//        return requestMap.get("fname") + " " + requestMap.get("lname");
+//    }
 
 //    @RequestMapping("/hello.html/{fname}/{lname}")
 //    @ResponseBody
@@ -28,10 +34,10 @@ public class StudentController {
 //        modelAndView.addObject("msg", "Hello World from jsp");
 //        return modelAndView;
 //    }
-    @ResponseBody
-    @RequestMapping("/hello.html")
-    String hello() {
-        return "Hello world";
-    }
+//    @ResponseBody
+//    @RequestMapping("/hello.html")
+//    String hello() {
+//        return "Hello world";
+//    }
 
 }
