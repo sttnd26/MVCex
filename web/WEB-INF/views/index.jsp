@@ -11,6 +11,6 @@
     <title>$Title$</title>
   </head>
   <body>
-    <p>Hello from index.jsp</p>
+    ${msg}
   </body>
 </html>

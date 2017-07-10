@@ -8,9 +8,11 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class StudentController {
 
-    @RequestMapping("/index.html")
+    @ResponseBody
+    @RequestMapping("/index")
     ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView("index");
+        modelAndView.addObject("msg", "Hello World from jsp");
         return modelAndView;
     }
 
