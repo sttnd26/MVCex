@@ -1,7 +1,6 @@
 package com.spring.controller;
 
 public class StudentCO {
-
     String firstname;
     String lastname;
 
