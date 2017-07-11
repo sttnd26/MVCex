@@ -11,6 +11,7 @@
     <title>Title</title>
 </head>
 <body>
-<p>using JSP View</p>
+    ${heading}
+  <p>using JSP View</p>
 </body>
 </html>
